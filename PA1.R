@@ -46,7 +46,7 @@ names(joinLabel) <- "activity"
 names(joinSubject) <- "subject"
 cleanedData <- cbind(joinSubject, joinLabel, joinData)
 dim(cleanedData) # 10299*68
-write.table(cleanedData, "D:/9.git/Getting and Cleaning Data/merged_data.txt") # write out the 1st dataset
+write.table(cleanedData, "D:/9.git/Getting and Cleaning Data/tidy_data_set.txt") # write out the 1st dataset
 
 # Step5. Creates a second, independent tidy data set with the average of 
 # each variable for each activity and each subject. 
@@ -68,7 +68,7 @@ for(i in 1:subjectLen) {
   }
 }
 head(result)
-write.table(result, "D:/9.git/Getting and Cleaning Data/data_with_means.txt") # write out the 2nd dataset
+write.table(result, "D:/9.git/Getting and Cleaning Data/data_set_with_means.txt") # write out the 2nd dataset
 
 # data <- read.table("./data_with_means.txt")
 # data[1:12, 1:3]
