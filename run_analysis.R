@@ -46,6 +46,6 @@
   X_melt<- melt(X_mean_std,id.vars=c("subject","activity"))
   gacd_tidy_wk <- dcast(X_melt, subject + activity ~ ..., mean)
   
-  ## Xav_tidy is it
+  ## gacd_tidy_wk is it
   write.table(gacd_tidy_wk, file="gacd_tidy_wk.txt", row.names = FALSE)
   
